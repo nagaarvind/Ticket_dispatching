@@ -22,20 +22,16 @@ whom_gr.next();
 
 var members = whom_gr.u_member_list_dict.toString();
 var members_list = members.split(",");
-   
 var next_assignee_number_in_listcolumn;
 
 if(whom_gr.u_last_assign == members_list.length - 1){
-             
 next_assignee_number_in_listcolumn = 0;
 }   
 else{
-      
 next_assignee_number_in_listcolumn = whom_gr.u_last_assign + 1;
 }
    
 gs.log(next_assignee_number_in_listcolumn);
-   
 var next_assignee_name = members_list[next_assignee_number_in_listcolumn];
    
 whom_gr.setValue('u_last_assign', next_assignee_number_in_listcolumn);
@@ -70,19 +66,14 @@ var inc_gr = new GlideRecord('incident'); //sys_id = a18ae7f447b84210ac155d0f536
 inc_gr.get(inc_sys_id);
    
 inc_gr.setValue('assigned_to', user_sys_id);
-   ß
 inc_gr.setValue('assignment_group', group_gr.sys_id)//asdfghjkl;************
-   
 inc_gr.update();
 }
-function
-username(){
+
+function username(){
 
 var user_gr = new GlideRecord('sys_user');
-
-
 var user_names_gio = [];
- 
 gr.addQuery('group',group);
 gr.query();
  
